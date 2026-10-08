@@ -2,6 +2,10 @@
 
 [ComicRack Community Edition](https://github.com/maforget/ComicRackCE) (a Windows/.NET app) running under Wine, served in the browser through KasmVNC. There is no upstream container, so this one follows the approach of [pezhore/comicrack-docker](https://github.com/pezhore/comicrack-docker).
 
+![ComicRack Community Edition](https://github.com/maforget/ComicRackCE/assets/11904426/4748925c-662f-4ccd-bfb7-62ec46ae881e)
+
+*Screenshot from the [ComicRackCE](https://github.com/maforget/ComicRackCE) project, linked from its README.*
+
 Image: `ghcr.io/arlytrenck/comicrack-ce` (tags: `latest` and the CE version, for example `v0.9.184`). amd64 only.
 
 ## Run
