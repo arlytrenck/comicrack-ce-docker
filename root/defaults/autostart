@@ -1,0 +1,8 @@
+# First start: build the prefix and install .NET 4.8 (10-20 min, blank desktop meanwhile).
+# One Xvfb session for both steps; wineserver -w lets wineboot finish before it is torn down.
+if [ ! -f /config/.dotnet48-done ]; then
+  WINEDLLOVERRIDES='mscoree,mshtml=' xvfb-run -a bash -c 'wineboot -u; wineserver -w; winetricks -q dotnet48 >> /config/dotnet48.log 2>&1; wineserver -w' \
+    && [ -f /config/wine/drive_c/windows/Microsoft.NET/Framework64/v4.0.30319/mscorlib.dll ] \
+    && touch /config/.dotnet48-done
+fi
+[ -f /config/.dotnet48-done ] && wine /opt/comicrack/ComicRack.exe

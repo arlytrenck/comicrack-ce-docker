@@ -1,0 +1,13 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["^Dockerfile$"],
+      "matchStrings": ["ARG CRCE_VERSION=(?<currentValue>v\\S+)"],
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "maforget/ComicRackCE"
+    }
+  ]
+}
